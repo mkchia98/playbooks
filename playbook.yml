@@ -1,0 +1,17 @@
+---
+- name: Creating a simple playbook
+  host: all
+  task: 
+  - name: IIS service installed
+    win_feature:
+      name: Web-Server
+      state: present
+  - name: IIS service started
+    win_service:
+      name: W3Svc
+      state: started
+  - name: Website index.html created
+    win_copy:
+      content: "Hello World!"
+      dest: C:\inetpub\wwwroot\index.html
+...
