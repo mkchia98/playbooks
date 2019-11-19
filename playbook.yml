@@ -1,7 +1,7 @@
 ---
 - name: Creating a simple playbook
   host: all
-  task: 
+  tasks: 
   - name: IIS service installed
     win_feature:
       name: Web-Server
