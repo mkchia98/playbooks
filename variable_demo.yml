@@ -2,7 +2,7 @@
 - name: Creating users
   hosts: all
   vars_files: 
-  - Variables\vars.yml
+  - Variables/vars.yml
   tasks:
   - name: Creating user {{usr}}
     win_user: 
