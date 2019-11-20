@@ -1,6 +1,6 @@
 ---
 - name: Creating a simple playbook
-  host: all
+  hosts: all
   tasks: 
   - name: IIS service installed
     win_feature:
