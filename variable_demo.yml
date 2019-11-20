@@ -1,12 +1,11 @@
 ---
 - name: Creating users
   hosts: all
-  vars:
-    - usr: testuser
+  vars_files: 
+  - Variables\vars.yml
   tasks:
   - name: Creating user {{usr}}
     win_user: 
       name: user_{{usr}}
       state: present
-
 ...
